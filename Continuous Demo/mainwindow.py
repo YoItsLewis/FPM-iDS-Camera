@@ -122,6 +122,7 @@ class MainWindow(QMainWindow):
             for device in device_manager.Devices():
                 if device.IsOpenable():
                     self.__device = device.OpenDevice(ids_peak.DeviceAccessType_Control)
+                    print('Camera found')
                     break
 
             # Return if no device could be opened
